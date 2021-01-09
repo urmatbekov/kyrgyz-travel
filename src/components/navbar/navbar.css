@@ -5,10 +5,12 @@
     width: 100%;
     transition: all 0.5s;
     z-index: 11;
+    color: white;
 }
 
 .navbar-bg {
     background-color: white;
+    color: black;
 }
 
 .navbar-nav {

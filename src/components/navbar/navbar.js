@@ -4,18 +4,19 @@ import "./navbar.css";
 
 const Navbar = () => {
     const [top, setTop] = useState(0)
+    const changeNavbar = (e) => {
+        setTop(window.pageYOffset)
+    }
     useEffect(() => {
         window.addEventListener("scroll", changeNavbar)
         return () => {
             window.removeEventListener("scroll", changeNavbar)
         }
     }, [])
-    const changeNavbar = (e) => {
-        setTop(window.pageYOffset)
-    }
+
 
     return (
-        <nav className={top > 10? "navbar navbar-bg":"navbar"}>
+        <nav className={top > 10 ? "navbar navbar-bg" : "navbar"}>
             <ul className="navbar-nav">
                 <li className="nav-item"><NavLink to="/">Home</NavLink></li>
                 <li className="nav-item"><NavLink to="/">Gallery</NavLink></li>
